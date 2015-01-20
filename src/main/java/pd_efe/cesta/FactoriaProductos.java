@@ -17,9 +17,9 @@ public class FactoriaProductos {
 	}
 	
 	public Articulo addArticulo(Articulo a) {
-		Articulo result = this.articulos.get(a.getKey());
+		Articulo result = this.articulos.get(a.getNombre());
 		if (result == null) {
-			this.articulos.put(a.getKey(), a);
+			this.articulos.put(a.getNombre(), a);
 			return a;
 		}
 		return result;
@@ -31,7 +31,7 @@ public class FactoriaProductos {
 	public String toString(){
 		String cadena = "";
 		for(Articulo a : articulos.values()){
-			cadena += "Nombre: " + a.getKey() + " Precio: "+ a.getPrecio() + "\n";
+			cadena += "Nombre: " + a.getNombre() + " Precio: "+ a.getPrecio() + "\n";
 		}
 		return cadena;
 	}

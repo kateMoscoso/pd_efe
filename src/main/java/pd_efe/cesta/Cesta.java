@@ -18,8 +18,7 @@ public abstract class Cesta extends Component {
 		}
 	}
 
-	@Override
-	public abstract String getKey();
+
 	@Override
 	public abstract int getPrecio();
 

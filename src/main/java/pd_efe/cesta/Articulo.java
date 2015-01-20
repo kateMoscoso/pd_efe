@@ -23,8 +23,7 @@ public class Articulo extends Component {
 
 
 
-	@Override
-	public String getKey() {
+	public String getNombre() {
 		return nombre;
 	}
 
