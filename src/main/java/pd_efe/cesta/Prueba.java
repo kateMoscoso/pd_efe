@@ -7,13 +7,13 @@ public class Prueba {
 		Articulo a3 = new Articulo("campurrianas", 3);
 		Articulo a4 = new Articulo("vino", 15);
 		Articulo a5 = new Articulo("queso", 25);
-		FactoriaProductos f = FactoriaProductos.getFactory();
-		f.addArticulo(a1.getNombre(), a1);
-		f.addArticulo(a2.getNombre(), a2);
-		f.addArticulo(a3.getNombre(), a3);
-		f.addArticulo(a4.getNombre(), a4);
-		f.addArticulo(a5.getNombre(), a5);
-		f.addArticulo(a1.getNombre(), a5); // no permite introducir mas producto con la misma key
+		FactoriaProductos f = FactoriaProductos.getFactoria();
+		f.addArticulo( a1);
+		f.addArticulo(a2);
+		f.addArticulo( a3);
+		f.addArticulo( a4);
+		f.addArticulo( a5);
+		f.addArticulo(a5); // no permite introducir mas producto con la misma key
 		
 		System.out.println(f.toString());
 		

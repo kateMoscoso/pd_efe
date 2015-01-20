@@ -22,15 +22,6 @@ public class Articulo extends Component {
 	}
 
 
-	public String getNombre() {
-		return nombre;
-	}
-
-
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
 
 	@Override
 	public String getKey() {
@@ -38,12 +29,17 @@ public class Articulo extends Component {
 	}
 
 
-
-
 	@Override
 	public int getNumeroArticulos() {
 		// TODO Auto-generated method stub
 		return 1;
+	}
+
+
+	@Override
+	public void add(Component c) {
+		// TODO Auto-generated method stub
+		
 	}
 
     

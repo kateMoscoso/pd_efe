@@ -9,18 +9,20 @@ public class FactoriaProductos {
 	private FactoriaProductos() {
 		this.articulos = new HashMap<String, Articulo>();
 	}
-	public static FactoriaProductos getFactory() {
+	public static FactoriaProductos getFactoria() {
 		if (factoriaProductos == null) {
 			factoriaProductos = new FactoriaProductos();
 		}
 		return factoriaProductos;
 	}
 	
-	public void addArticulo(String key, Articulo a) {
-		Articulo result = this.articulos.get(key);
+	public Articulo addArticulo(Articulo a) {
+		Articulo result = this.articulos.get(a.getKey());
 		if (result == null) {
-			this.articulos.put(key, a);
+			this.articulos.put(a.getKey(), a);
+			return a;
 		}
+		return result;
 	}
 	public void removeReference(String key) {
 		this.articulos.remove(key);
@@ -29,7 +31,7 @@ public class FactoriaProductos {
 	public String toString(){
 		String cadena = "";
 		for(Articulo a : articulos.values()){
-			cadena += "Nombre: " + a.getNombre() + " Precio: "+ a.getPrecio() + "\n";
+			cadena += "Nombre: " + a.getKey() + " Precio: "+ a.getPrecio() + "\n";
 		}
 		return cadena;
 	}
