@@ -38,9 +38,12 @@ public class Articulo extends Component {
 	}
 
 
+
+
 	@Override
-	public boolean isCesta() {
-		return false;
+	public int getNumeroArticulos() {
+		// TODO Auto-generated method stub
+		return 1;
 	}
 
     
